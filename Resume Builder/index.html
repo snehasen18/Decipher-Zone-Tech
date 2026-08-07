@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Resume Builder</h1>
+      <button type="button" id="mode">Dark Mode</button>
+    </header>
+    <main class="container">
+      <section class="template-section">
+        <h2>Choose Resume Template</h2>
+        <div class="template-container">
+          <div class="template-card active" data-template="template1">
+            <h3>Template 1</h3>
+            <p>Classic Professional Resume</p>
+          </div>
+          <div class="template-card" data-template="template2">
+            <h3>Template 2</h3>
+            <p>Modern Sidebar Resume</p>
+          </div>
+        </div>
+      </section>
+      <section class="resume-form">
+        <form id="resumeForm">
+          <h2>Personal Information</h2>
+          <label>Full Name</label>
+          <input id="name" type="text" />
+          <label>Job Title</label>
+          <input id="jobTitle" type="text" />
+          <label>Phone</label>
+          <input id="phone" type="tel" />
+          <label>Email</label>
+          <input id="email" type="email" />
+          <label>LinkedIn</label>
+          <input id="linkedin" type="url" />
+          <label>GitHub</label>
+          <input id="github" type="url" />
+          <label>Location</label>
+          <input id="location" type="text" />
+          <label>Summary</label>
+          <textarea id="summary" rows="4"></textarea>
+          <hr />
+          <h2>Skills</h2>
+          <input id="skill" type="text" placeholder="Enter Skill" />
+          <button type="button" id="skill-btn">Add Skill</button>
+          <ul id="skillList"></ul>
+          <hr />
+          <h2>Education</h2>
+          <select id="degree">
+            <option value="">Select Qualification</option>
+            <option>10th</option>
+            <option>12th</option>
+            <option>Diploma</option>
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>MCA</option>
+            <option>M.Tech</option>
+            <option>MBA</option>
+          </select>
+          <input id="institute" type="text" placeholder="Institute" />
+          <input id="startYear" type="number" placeholder="Start Year" />
+          <input id="endYear" type="number" placeholder="End Year" />
+          <input id="cgpa" type="text" placeholder="CGPA / Percentage" />
+          <button type="button" id="education-btn">Add Education</button>
+          <div id="educationList"></div>
+          <hr />
+          <h2>Experience</h2>
+          <input id="companyName" type="text" placeholder="Company Name" />
+          <input id="jobRole" type="text" placeholder="Job Role" />
+          <input id="startDate" type="month" />
+          <input id="endDate" type="month" />
+          <textarea
+            id="workDescriptions"
+            rows="4"
+            placeholder="Work Description"
+          ></textarea>
+          <button type="button" id="experience-btn">Add Experience</button>
+          <div id="experienceList"></div>
+          <hr />
+          <h2>Projects</h2>
+          <input id="projectName" type="text" placeholder="Project Name" />
+          <input id="technologies" type="text" placeholder="Technologies" />
+          <textarea id="projectDescription" rows="4"></textarea>
+          <input id="gitLink" type="url" placeholder="GitHub Link" />
+          <button type="button" id="project-btn">Add Project</button>
+          <div id="projectList"></div>
+          <hr />
+          <h2>Certificates</h2>
+          <input
+            id="certificateName"
+            type="text"
+            placeholder="Certificate Name"
+          />
+          <input id="issuedBy" type="text" placeholder="Issued By" />
+          <input id="issuedDate" type="month" />
+          <button type="button" id="certificate-btn">Add Certificate</button>
+          <div id="certificateList"></div>
+          <hr />
+          <div class="buttons">
+            <button type="button" id="generateresume-btn">
+              Generate Resume
+            </button>
+            <button type="button" id="updatePreview-btn">Update Preview</button>
+            <button type="button" id="downloadResume-btn">Download PDF</button>
+            <button type="button" id="saveResume-btn">Save Resume</button>
+            <button type="button" id="resetForm-btn">Reset</button>
+          </div>
+        </form>
+      </section>
+      <section class="resume-preview">
+        <div id="previewContainer"></div>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

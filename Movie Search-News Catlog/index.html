@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Marquee &amp; Wire — Movie &amp; News Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="marquee">
+  <h1 class="title">MARQUEE &amp; WIRE</h1>
+  <div class="subtitle">Now Showing · On The Wire</div>
+</header>
+<div class="config-banner" id="configBanner">
+  ⚠ Add your API keys in <code>index.html</code> → <code>CONFIG</code> (search for <code>TMDB_API_KEY</code> and <code>NEWSAPI_KEY</code>) to load live results.
+</div>
+<div class="controls">
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="movies">Movies</button>
+    <button class="tab-btn" data-tab="news">News</button>
+    <button class="tab-btn" data-tab="bookmarks">Bookmarks</button>
+  </div>
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="searchInput" placeholder="Search movies…" />
+  </div>
+</div>
+<div class="search-status" id="searchStatus" style="max-width:1100px;margin:4px auto 0;padding:0 24px 0 264px;"></div>
+<div class="category-row" id="categoryRow"></div>
+<main>
+  <div class="grid" id="grid"></div>
+</main>
+<footer>Movie data via TMDB · News via NewsAPI · Bookmarks saved locally in cookies</footer>
+<div class="overlay" id="overlay">
+  <div class="modal" id="modalBox"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

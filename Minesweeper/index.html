@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minesweeper</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="hud">
+      <div class="hud-panel" id="mineCount">
+        <span class="hud-label">Mines</span>
+        <span class="hud-value" id="mineCountValue">10</span>
+      </div>
+      <button class="reset-btn" id="resetBtn" title="New game" aria-label="New game">🙂</button>
+      <div class="hud-panel" id="timer">
+        <span class="hud-label">Time</span>
+        <span class="hud-value" id="timerValue">000</span>
+      </div>
+    </header>
+    <div class="board" id="board" role="grid" aria-label="Minesweeper board"></div>
+    <p class="hint">Left-click to reveal &middot; Right-click to flag</p>
+  </main>
+  <!-- Win / Loss modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h2 id="modalTitle">You win!</h2>
+      <p id="modalMessage">Cleared the field in <span id="modalTime">0</span>s.</p>
+      <button class="modal-btn" id="modalPlayAgain">Play again</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
