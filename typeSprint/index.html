@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TypeMaster — Speed Typing Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="shell">
+    <header class="top">
+      <h1>Type<span>Master</span></h1>
+      <div class="best">
+        <span class="best-label">Best WPM</span>
+        <span class="best-value" id="bestWpm">0</span>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat">
+        <span class="stat-value" id="timeLeft">60</span>
+        <span class="stat-label">seconds</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="wpmValue">0</span>
+        <span class="stat-label">wpm</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="accuracyValue">100%</span>
+        <span class="stat-label">accuracy</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="mistakeValue">0</span>
+        <span class="stat-label">mistakes</span>
+      </div>
+    </section>
+
+    <div class="text-display" id="textDisplay"></div>
+
+    <textarea
+      id="typingInput"
+      class="typing-input"
+      placeholder="Click here and start typing to begin the 60-second test…"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+    ></textarea>
+
+    <div class="controls">
+      <button id="restartBtn" class="restart-btn">↻ Restart</button>
+    </div>
+  </main>
+
+  <!-- Result modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <h2 id="modalHeading">Time's up!</h2>
+      <div class="modal-grid">
+        <div><span class="modal-value" id="finalWpm">0</span><span class="modal-label">WPM</span></div>
+        <div><span class="modal-value" id="finalAccuracy">0%</span><span class="modal-label">Accuracy</span></div>
+        <div><span class="modal-value" id="finalMistakes">0</span><span class="modal-label">Mistakes</span></div>
+      </div>
+      <p class="modal-note" id="modalNote"></p>
+      <button class="modal-btn" id="modalRestartBtn">Try again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
